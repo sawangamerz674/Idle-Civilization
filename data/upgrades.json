@@ -1,0 +1,605 @@
+{
+  "categories": [
+    {
+      "id": "production",
+      "name": "Building Production"
+    },
+    {
+      "id": "multiplier",
+      "name": "Resource Multipliers"
+    },
+    {
+      "id": "population",
+      "name": "Population"
+    },
+    {
+      "id": "storage",
+      "name": "Storage"
+    },
+    {
+      "id": "research",
+      "name": "Research Efficiency"
+    },
+    {
+      "id": "offline",
+      "name": "Offline Production"
+    },
+    {
+      "id": "economic",
+      "name": "Economy"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "sharper_axes",
+      "name": "Sharper Axes",
+      "description": "Woodcutters chop faster.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "woodcutter",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 300
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "woodcutter",
+        "count": 1
+      }
+    },
+    {
+      "id": "iron_plows",
+      "name": "Iron Plows",
+      "description": "Farms yield more per season.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "farm",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 350
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "farm",
+        "count": 1
+      }
+    },
+    {
+      "id": "quarry_tools",
+      "name": "Quarry Tools",
+      "description": "Stone collectors dig deeper.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "stone_collector",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 300,
+        "stone": 150
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "stone_collector",
+        "count": 1
+      }
+    },
+    {
+      "id": "merchant_stalls",
+      "name": "Merchant Stalls",
+      "description": "Markets attract more trade.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "market",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 1000,
+        "stone": 600,
+        "coins": 300
+      },
+      "costGrowth": 2.05,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "market",
+        "count": 1
+      }
+    },
+    {
+      "id": "foundry_upgrades",
+      "name": "Foundry Upgrades",
+      "description": "Blacksmiths forge faster.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "blacksmith",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 3000,
+        "stone": 2500,
+        "metal": 1000
+      },
+      "costGrowth": 2.05,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "blacksmith",
+        "count": 1
+      }
+    },
+    {
+      "id": "industrial_machinery",
+      "name": "Industrial Machinery",
+      "description": "Factories run at higher output.",
+      "category": "production",
+      "effect": {
+        "type": "building",
+        "target": "factory",
+        "value": 0.15
+      },
+      "cost": {
+        "stone": 12500,
+        "metal": 7500,
+        "coins": 15000
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "factory",
+        "count": 1
+      }
+    },
+    {
+      "id": "harvest_festivals",
+      "name": "Harvest Festivals",
+      "description": "Celebrations boost all food production.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "food",
+        "value": 0.08
+      },
+      "cost": {
+        "wood": 500,
+        "stone": 300
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "farm",
+        "count": 2
+      }
+    },
+    {
+      "id": "lumber_guild",
+      "name": "Lumber Guild",
+      "description": "Organized loggers produce more wood.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "wood",
+        "value": 0.08
+      },
+      "cost": {
+        "food": 500,
+        "stone": 250
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "woodcutter",
+        "count": 2
+      }
+    },
+    {
+      "id": "stonemason_union",
+      "name": "Stonemason Union",
+      "description": "Union rules improve stone output.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "stone",
+        "value": 0.08
+      },
+      "cost": {
+        "food": 500,
+        "wood": 600
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "stone_collector",
+        "count": 2
+      }
+    },
+    {
+      "id": "metal_contracts",
+      "name": "Metal Contracts",
+      "description": "Guaranteed buyers raise metal output.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "metal",
+        "value": 0.08
+      },
+      "cost": {
+        "wood": 2000,
+        "coins": 500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "ancient",
+        "building": "workshop",
+        "count": 1
+      }
+    },
+    {
+      "id": "academic_grants",
+      "name": "Academic Grants",
+      "description": "Patrons fund more science.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "science",
+        "value": 0.08
+      },
+      "cost": {
+        "wood": 1500,
+        "coins": 1500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "library",
+        "count": 1
+      }
+    },
+    {
+      "id": "grid_optimization",
+      "name": "Grid Optimization",
+      "description": "Smarter distribution boosts energy.",
+      "category": "multiplier",
+      "effect": {
+        "type": "production",
+        "target": "energy",
+        "value": 0.08
+      },
+      "cost": {
+        "metal": 5000,
+        "coins": 7500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "power_plant",
+        "count": 1
+      }
+    },
+    {
+      "id": "communal_housing",
+      "name": "Communal Housing",
+      "description": "Squeeze a little more room out of every home.",
+      "category": "population",
+      "effect": {
+        "type": "stat",
+        "target": "housing",
+        "value": 2
+      },
+      "cost": {
+        "wood": 400,
+        "stone": 200
+      },
+      "costGrowth": 1.9,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "hut",
+        "count": 1
+      }
+    },
+    {
+      "id": "midwives",
+      "name": "Midwives",
+      "description": "Families grow faster.",
+      "category": "population",
+      "effect": {
+        "type": "stat",
+        "target": "growthSpeed",
+        "value": 0.1
+      },
+      "cost": {
+        "food": 500,
+        "wood": 300
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "hut",
+        "count": 1
+      }
+    },
+    {
+      "id": "hearty_meals",
+      "name": "Hearty Meals",
+      "description": "Citizens eat less food for the same energy.",
+      "category": "population",
+      "effect": {
+        "type": "stat",
+        "target": "foodUse",
+        "value": 0.04
+      },
+      "cost": {
+        "food": 750,
+        "wood": 500
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "farm",
+        "count": 1
+      }
+    },
+    {
+      "id": "stout_baskets",
+      "name": "Stout Baskets",
+      "description": "Storage holds more.",
+      "category": "storage",
+      "effect": {
+        "type": "storage",
+        "value": 0.15
+      },
+      "cost": {
+        "wood": 600
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "woodcutter",
+        "count": 1
+      }
+    },
+    {
+      "id": "warehouse_network",
+      "name": "Warehouse Network",
+      "description": "Warehouses link every district.",
+      "category": "storage",
+      "effect": {
+        "type": "storage",
+        "value": 0.25
+      },
+      "cost": {
+        "wood": 4000,
+        "stone": 3000,
+        "coins": 1500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "ancient",
+        "building": "market",
+        "count": 1
+      }
+    },
+    {
+      "id": "automated_logistics",
+      "name": "Automated Logistics",
+      "description": "Robotic depots keep more in reserve.",
+      "category": "storage",
+      "effect": {
+        "type": "storage",
+        "value": 0.4
+      },
+      "cost": {
+        "stone": 20000,
+        "metal": 12500,
+        "coins": 25000
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "industrial"
+      }
+    },
+    {
+      "id": "study_groups",
+      "name": "Study Groups",
+      "description": "Citizens learn together, speeding research.",
+      "category": "research",
+      "effect": {
+        "type": "stat",
+        "target": "researchSpeed",
+        "value": 0.08
+      },
+      "cost": {
+        "food": 750,
+        "wood": 500
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 10,
+      "unlock": null
+    },
+    {
+      "id": "scribes_guild",
+      "name": "Scribes' Guild",
+      "description": "Trained scribes accelerate research.",
+      "category": "research",
+      "effect": {
+        "type": "stat",
+        "target": "researchSpeed",
+        "value": 0.1
+      },
+      "cost": {
+        "wood": 2000,
+        "stone": 1250,
+        "coins": 500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "library",
+        "count": 1
+      }
+    },
+    {
+      "id": "research_grants",
+      "name": "Research Grants",
+      "description": "Dedicated funding for scholars.",
+      "category": "research",
+      "effect": {
+        "type": "stat",
+        "target": "researchSpeed",
+        "value": 0.15
+      },
+      "cost": {
+        "coins": 7500,
+        "metal": 2500,
+        "science": 1500
+      },
+      "costGrowth": 2.2,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "medieval",
+        "building": "library",
+        "count": 2
+      }
+    },
+    {
+      "id": "night_watch",
+      "name": "Night Watch",
+      "description": "Guards protect production while you are away.",
+      "category": "offline",
+      "effect": {
+        "type": "stat",
+        "target": "offlineEfficiency",
+        "value": 0.05
+      },
+      "cost": {
+        "wood": 750,
+        "stone": 500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "building": "hut",
+        "count": 2
+      }
+    },
+    {
+      "id": "caravan_rest_stops",
+      "name": "Caravan Rest Stops",
+      "description": "Caravans keep working longer while you are away.",
+      "category": "offline",
+      "effect": {
+        "type": "stat",
+        "target": "offlineHours",
+        "value": 1
+      },
+      "cost": {
+        "wood": 2500,
+        "stone": 1500,
+        "coins": 750
+      },
+      "costGrowth": 2.3,
+      "maxLevel": 8,
+      "unlock": {
+        "era": "ancient",
+        "building": "market",
+        "count": 1
+      }
+    },
+    {
+      "id": "idle_workshops",
+      "name": "Idle Workshops",
+      "description": "Automated craft work while you sleep.",
+      "category": "offline",
+      "effect": {
+        "type": "stat",
+        "target": "offlineEfficiency",
+        "value": 0.05
+      },
+      "cost": {
+        "metal": 4000,
+        "coins": 5000
+      },
+      "costGrowth": 2.2,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "medieval"
+      }
+    },
+    {
+      "id": "haggling",
+      "name": "Haggling",
+      "description": "Builders negotiate cheaper construction.",
+      "category": "economic",
+      "effect": {
+        "type": "stat",
+        "target": "buildingCost",
+        "value": 0.02
+      },
+      "cost": {
+        "wood": 1000,
+        "stone": 500
+      },
+      "costGrowth": 2.0,
+      "maxLevel": 15,
+      "unlock": {
+        "era": "ancient",
+        "building": "market",
+        "count": 1
+      }
+    },
+    {
+      "id": "golden_age",
+      "name": "Golden Age",
+      "description": "A prosperous age increases coin income.",
+      "category": "economic",
+      "effect": {
+        "type": "production",
+        "target": "coins",
+        "value": 0.08
+      },
+      "cost": {
+        "stone": 1500,
+        "metal": 500
+      },
+      "costGrowth": 2.1,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "ancient",
+        "building": "market",
+        "count": 1
+      }
+    },
+    {
+      "id": "investments",
+      "name": "Investments",
+      "description": "Capital grows all production a little.",
+      "category": "economic",
+      "effect": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      },
+      "cost": {
+        "coins": 5000,
+        "science": 1000
+      },
+      "costGrowth": 2.2,
+      "maxLevel": 10,
+      "unlock": {
+        "era": "medieval",
+        "building": "trading_center",
+        "count": 1
+      }
+    }
+  ]
+}

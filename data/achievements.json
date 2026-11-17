@@ -1,0 +1,590 @@
+{
+  "categories": [
+    {
+      "id": "resources",
+      "name": "Resources"
+    },
+    {
+      "id": "buildings",
+      "name": "Buildings"
+    },
+    {
+      "id": "population",
+      "name": "Population"
+    },
+    {
+      "id": "eras",
+      "name": "Eras"
+    },
+    {
+      "id": "research",
+      "name": "Research"
+    },
+    {
+      "id": "prestige",
+      "name": "Prestige"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "produce_food_1",
+      "name": "Gatherer I",
+      "description": "Produce 1,000 Food in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "food"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_food_2",
+      "name": "Gatherer II",
+      "description": "Produce 100,000 Food in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "food"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_food_3",
+      "name": "Gatherer III",
+      "description": "Produce 10,000,000 Food in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "food"
+      },
+      "goal": 10000000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "produce_wood_1",
+      "name": "Lumberjack I",
+      "description": "Produce 1,000 Wood in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "wood"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_wood_2",
+      "name": "Lumberjack II",
+      "description": "Produce 100,000 Wood in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "wood"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_stone_1",
+      "name": "Quarryman I",
+      "description": "Produce 1,000 Stone in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "stone"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_stone_2",
+      "name": "Quarryman II",
+      "description": "Produce 100,000 Stone in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "stone"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_metal_1",
+      "name": "Smith I",
+      "description": "Produce 1,000 Metal in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "metal"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_metal_2",
+      "name": "Smith II",
+      "description": "Produce 100,000 Metal in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "metal"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_coins_1",
+      "name": "Merchant I",
+      "description": "Produce 1,000 Coins in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "coins"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_coins_2",
+      "name": "Merchant II",
+      "description": "Produce 100,000 Coins in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "coins"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_coins_3",
+      "name": "Merchant III",
+      "description": "Produce 10,000,000 Coins in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "coins"
+      },
+      "goal": 10000000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "produce_science_1",
+      "name": "Scholar I",
+      "description": "Produce 1,000 Science Points in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "science"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_science_2",
+      "name": "Scholar II",
+      "description": "Produce 100,000 Science Points in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "science"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "produce_energy_1",
+      "name": "Technician I",
+      "description": "Produce 1,000 Energy in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "energy"
+      },
+      "goal": 1000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "produce_energy_2",
+      "name": "Technician II",
+      "description": "Produce 100,000 Energy in total.",
+      "category": "resources",
+      "stat": {
+        "type": "produced",
+        "resource": "energy"
+      },
+      "goal": 100000,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "build_1",
+      "name": "Builder I",
+      "description": "Construct 10 buildings.",
+      "category": "buildings",
+      "stat": {
+        "type": "buildings"
+      },
+      "goal": 10,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "build_2",
+      "name": "Builder II",
+      "description": "Construct 50 buildings.",
+      "category": "buildings",
+      "stat": {
+        "type": "buildings"
+      },
+      "goal": 50,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "build_3",
+      "name": "Builder III",
+      "description": "Construct 150 buildings.",
+      "category": "buildings",
+      "stat": {
+        "type": "buildings"
+      },
+      "goal": 150,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "build_4",
+      "name": "Builder IIII",
+      "description": "Construct 400 buildings.",
+      "category": "buildings",
+      "stat": {
+        "type": "buildings"
+      },
+      "goal": 400,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "pop_1",
+      "name": "Populous I",
+      "description": "Reach a population of 10.",
+      "category": "population",
+      "stat": {
+        "type": "population"
+      },
+      "goal": 10,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "pop_2",
+      "name": "Populous II",
+      "description": "Reach a population of 25.",
+      "category": "population",
+      "stat": {
+        "type": "population"
+      },
+      "goal": 25,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "pop_3",
+      "name": "Populous III",
+      "description": "Reach a population of 50.",
+      "category": "population",
+      "stat": {
+        "type": "population"
+      },
+      "goal": 50,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "pop_4",
+      "name": "Populous IIII",
+      "description": "Reach a population of 100.",
+      "category": "population",
+      "stat": {
+        "type": "population"
+      },
+      "goal": 100,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "pop_5",
+      "name": "Populous IIIII",
+      "description": "Reach a population of 200.",
+      "category": "population",
+      "stat": {
+        "type": "population"
+      },
+      "goal": 200,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "era_ancient",
+      "name": "Welcome to the Ancient Age",
+      "description": "Reach the Ancient Age.",
+      "category": "eras",
+      "stat": {
+        "type": "era",
+        "index": 2
+      },
+      "goal": 2,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "era_medieval",
+      "name": "Welcome to the Medieval Age",
+      "description": "Reach the Medieval Age.",
+      "category": "eras",
+      "stat": {
+        "type": "era",
+        "index": 3
+      },
+      "goal": 3,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "era_industrial",
+      "name": "Welcome to the Industrial Age",
+      "description": "Reach the Industrial Age.",
+      "category": "eras",
+      "stat": {
+        "type": "era",
+        "index": 4
+      },
+      "goal": 4,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.04
+      }
+    },
+    {
+      "id": "era_futuristic",
+      "name": "Welcome to the Futuristic Age",
+      "description": "Reach the Futuristic Age.",
+      "category": "eras",
+      "stat": {
+        "type": "era",
+        "index": 5
+      },
+      "goal": 5,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.05
+      }
+    },
+    {
+      "id": "research_1",
+      "name": "Thinker I",
+      "description": "Complete 1 research project.",
+      "category": "research",
+      "stat": {
+        "type": "research"
+      },
+      "goal": 1,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.01
+      }
+    },
+    {
+      "id": "research_2",
+      "name": "Thinker II",
+      "description": "Complete 5 research projects.",
+      "category": "research",
+      "stat": {
+        "type": "research"
+      },
+      "goal": 5,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.02
+      }
+    },
+    {
+      "id": "research_3",
+      "name": "Thinker III",
+      "description": "Complete 15 research projects.",
+      "category": "research",
+      "stat": {
+        "type": "research"
+      },
+      "goal": 15,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.03
+      }
+    },
+    {
+      "id": "research_4",
+      "name": "Thinker IIII",
+      "description": "Complete 35 research projects.",
+      "category": "research",
+      "stat": {
+        "type": "research"
+      },
+      "goal": 35,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.05
+      }
+    },
+    {
+      "id": "prestige_1",
+      "name": "Legacy I",
+      "description": "Prestige 1 time.",
+      "category": "prestige",
+      "stat": {
+        "type": "prestige"
+      },
+      "goal": 1,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.05
+      }
+    },
+    {
+      "id": "prestige_2",
+      "name": "Legacy II",
+      "description": "Prestige 3 times.",
+      "category": "prestige",
+      "stat": {
+        "type": "prestige"
+      },
+      "goal": 3,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.08
+      }
+    },
+    {
+      "id": "prestige_3",
+      "name": "Legacy III",
+      "description": "Prestige 10 times.",
+      "category": "prestige",
+      "stat": {
+        "type": "prestige"
+      },
+      "goal": 10,
+      "reward": {
+        "type": "production",
+        "target": "all",
+        "value": 0.12
+      }
+    }
+  ]
+}

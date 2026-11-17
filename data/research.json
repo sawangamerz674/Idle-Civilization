@@ -1,0 +1,527 @@
+{
+  "branches": [
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "icon": "\ud83c\udf3e"
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "icon": "\ud83c\udfdb\ufe0f"
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "icon": "\u2699\ufe0f"
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "icon": "\ud83e\ude99"
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "icon": "\ud83e\uddea"
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "icon": "\u26a1"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "icon": "\ud83e\udd16"
+    }
+  ],
+  "research": [
+    {
+      "id": "selective_planting",
+      "name": "Selective Planting",
+      "branch": "agriculture",
+      "era": "stone_age",
+      "description": "Keep the best seeds for next season.",
+      "cost": {
+        "food": 60,
+        "wood": 30
+      },
+      "time": 20,
+      "prerequisites": []
+    },
+    {
+      "id": "irrigation",
+      "name": "Irrigation",
+      "branch": "agriculture",
+      "era": "ancient",
+      "description": "Channel river water to the fields.",
+      "cost": {
+        "science": 125
+      },
+      "time": 40,
+      "prerequisites": [
+        "selective_planting"
+      ]
+    },
+    {
+      "id": "crop_rotation",
+      "name": "Crop Rotation",
+      "branch": "agriculture",
+      "era": "medieval",
+      "description": "Rotate crops to keep the soil rich.",
+      "cost": {
+        "science": 750
+      },
+      "time": 70,
+      "prerequisites": [
+        "irrigation"
+      ]
+    },
+    {
+      "id": "fertilizers",
+      "name": "Fertilizers",
+      "branch": "agriculture",
+      "era": "industrial",
+      "description": "Feed the soil with engineered nutrients.",
+      "cost": {
+        "science": 6000
+      },
+      "time": 130,
+      "prerequisites": [
+        "crop_rotation"
+      ]
+    },
+    {
+      "id": "hydroponics",
+      "name": "Hydroponics",
+      "branch": "agriculture",
+      "era": "futuristic",
+      "description": "Grow crops in towers of water and light.",
+      "cost": {
+        "science": 50000
+      },
+      "time": 260,
+      "prerequisites": [
+        "fertilizers"
+      ]
+    },
+    {
+      "id": "shelter_building",
+      "name": "Shelter Building",
+      "branch": "architecture",
+      "era": "stone_age",
+      "description": "Sturdier huts keep more people dry.",
+      "cost": {
+        "wood": 80,
+        "stone": 40
+      },
+      "time": 25,
+      "prerequisites": []
+    },
+    {
+      "id": "masonry",
+      "name": "Masonry",
+      "branch": "architecture",
+      "era": "ancient",
+      "description": "Cut and fit stone for lasting walls and roads.",
+      "cost": {
+        "science": 150
+      },
+      "time": 45,
+      "prerequisites": [
+        "shelter_building"
+      ]
+    },
+    {
+      "id": "city_planning",
+      "name": "City Planning",
+      "branch": "architecture",
+      "era": "medieval",
+      "description": "Lay out districts, walls and keeps.",
+      "cost": {
+        "science": 900
+      },
+      "time": 80,
+      "prerequisites": [
+        "masonry"
+      ]
+    },
+    {
+      "id": "urbanization",
+      "name": "Urbanization",
+      "branch": "architecture",
+      "era": "industrial",
+      "description": "Pack people efficiently around the factories.",
+      "cost": {
+        "science": 7000
+      },
+      "time": 140,
+      "prerequisites": [
+        "city_planning"
+      ]
+    },
+    {
+      "id": "smart_cities",
+      "name": "Smart Cities",
+      "branch": "architecture",
+      "era": "futuristic",
+      "description": "Cities that manage themselves.",
+      "cost": {
+        "science": 60000
+      },
+      "time": 280,
+      "prerequisites": [
+        "urbanization"
+      ]
+    },
+    {
+      "id": "basic_tools",
+      "name": "Basic Tools",
+      "branch": "engineering",
+      "era": "stone_age",
+      "description": "Chip flint into axes, scrapers and picks.",
+      "cost": {
+        "wood": 50,
+        "stone": 30
+      },
+      "time": 15,
+      "prerequisites": []
+    },
+    {
+      "id": "bronze_working",
+      "name": "Bronze Working",
+      "branch": "engineering",
+      "era": "ancient",
+      "description": "Alloy copper and tin into bronze.",
+      "cost": {
+        "science": 125
+      },
+      "time": 45,
+      "prerequisites": [
+        "basic_tools"
+      ]
+    },
+    {
+      "id": "metallurgy",
+      "name": "Metallurgy",
+      "branch": "engineering",
+      "era": "medieval",
+      "description": "Smelt and forge iron.",
+      "cost": {
+        "science": 700
+      },
+      "time": 75,
+      "prerequisites": [
+        "bronze_working"
+      ]
+    },
+    {
+      "id": "mass_production",
+      "name": "Mass Production",
+      "branch": "engineering",
+      "era": "industrial",
+      "description": "Standard parts, standard output.",
+      "cost": {
+        "science": 6500
+      },
+      "time": 140,
+      "prerequisites": [
+        "metallurgy"
+      ]
+    },
+    {
+      "id": "nanotechnology",
+      "name": "Nanotechnology",
+      "branch": "engineering",
+      "era": "futuristic",
+      "description": "Build matter atom by atom.",
+      "cost": {
+        "science": 90000
+      },
+      "time": 300,
+      "prerequisites": [
+        "mass_production"
+      ]
+    },
+    {
+      "id": "barter",
+      "name": "Barter",
+      "branch": "economics",
+      "era": "stone_age",
+      "description": "Trade goods before there was money.",
+      "cost": {
+        "food": 40,
+        "wood": 40
+      },
+      "time": 15,
+      "prerequisites": []
+    },
+    {
+      "id": "currency",
+      "name": "Currency",
+      "branch": "economics",
+      "era": "ancient",
+      "description": "Stamped metal makes trade simple.",
+      "cost": {
+        "science": 175
+      },
+      "time": 50,
+      "prerequisites": [
+        "barter"
+      ]
+    },
+    {
+      "id": "banking",
+      "name": "Banking",
+      "branch": "economics",
+      "era": "medieval",
+      "description": "Lend, save and invest.",
+      "cost": {
+        "science": 1000
+      },
+      "time": 85,
+      "prerequisites": [
+        "currency"
+      ]
+    },
+    {
+      "id": "stock_exchange",
+      "name": "Stock Exchange",
+      "branch": "economics",
+      "era": "industrial",
+      "description": "Trade shares of the new industries.",
+      "cost": {
+        "science": 9000
+      },
+      "time": 150,
+      "prerequisites": [
+        "banking"
+      ]
+    },
+    {
+      "id": "global_trade",
+      "name": "Global Trade",
+      "branch": "economics",
+      "era": "futuristic",
+      "description": "Connect every market on the planet.",
+      "cost": {
+        "science": 70000
+      },
+      "time": 270,
+      "prerequisites": [
+        "stock_exchange"
+      ]
+    },
+    {
+      "id": "oral_tradition",
+      "name": "Oral Tradition",
+      "branch": "science",
+      "era": "stone_age",
+      "description": "Pass knowledge down by story and song.",
+      "cost": {
+        "food": 70
+      },
+      "time": 20,
+      "prerequisites": []
+    },
+    {
+      "id": "writing",
+      "name": "Writing",
+      "branch": "science",
+      "era": "ancient",
+      "description": "Record knowledge so it is never lost.",
+      "cost": {
+        "wood": 150,
+        "stone": 100
+      },
+      "time": 45,
+      "prerequisites": [
+        "oral_tradition"
+      ]
+    },
+    {
+      "id": "scientific_method",
+      "name": "Scientific Method",
+      "branch": "science",
+      "era": "medieval",
+      "description": "Test ideas with experiments.",
+      "cost": {
+        "science": 800
+      },
+      "time": 80,
+      "prerequisites": [
+        "writing"
+      ]
+    },
+    {
+      "id": "universities",
+      "name": "Universities",
+      "branch": "science",
+      "era": "industrial",
+      "description": "Institutions devoted to learning.",
+      "cost": {
+        "science": 7500
+      },
+      "time": 140,
+      "prerequisites": [
+        "scientific_method"
+      ]
+    },
+    {
+      "id": "quantum_computing",
+      "name": "Quantum Computing",
+      "branch": "science",
+      "era": "futuristic",
+      "description": "Compute with superposition.",
+      "cost": {
+        "science": 100000
+      },
+      "time": 300,
+      "prerequisites": [
+        "universities"
+      ]
+    },
+    {
+      "id": "fire_mastery",
+      "name": "Fire Mastery",
+      "branch": "energy",
+      "era": "stone_age",
+      "description": "Keep a fire burning through the night.",
+      "cost": {
+        "wood": 60,
+        "stone": 20
+      },
+      "time": 20,
+      "prerequisites": []
+    },
+    {
+      "id": "waterwheels",
+      "name": "Waterwheels",
+      "branch": "energy",
+      "era": "ancient",
+      "description": "Let rivers turn the work.",
+      "cost": {
+        "science": 140
+      },
+      "time": 45,
+      "prerequisites": [
+        "fire_mastery"
+      ]
+    },
+    {
+      "id": "wind_power",
+      "name": "Wind Power",
+      "branch": "energy",
+      "era": "medieval",
+      "description": "Sails that catch the wind.",
+      "cost": {
+        "science": 850
+      },
+      "time": 80,
+      "prerequisites": [
+        "waterwheels"
+      ]
+    },
+    {
+      "id": "steam_power",
+      "name": "Steam Power",
+      "branch": "energy",
+      "era": "industrial",
+      "description": "Harness boiling water.",
+      "cost": {
+        "science": 5000
+      },
+      "time": 130,
+      "prerequisites": [
+        "wind_power"
+      ]
+    },
+    {
+      "id": "fusion_power",
+      "name": "Fusion Power",
+      "branch": "energy",
+      "era": "futuristic",
+      "description": "Bottle a star.",
+      "cost": {
+        "science": 80000
+      },
+      "time": 280,
+      "prerequisites": [
+        "steam_power"
+      ]
+    },
+    {
+      "id": "division_of_labor",
+      "name": "Division of Labor",
+      "branch": "automation",
+      "era": "ancient",
+      "description": "Everyone does what they do best.",
+      "cost": {
+        "science": 150
+      },
+      "time": 50,
+      "prerequisites": [
+        "basic_tools"
+      ]
+    },
+    {
+      "id": "guilds",
+      "name": "Guilds",
+      "branch": "automation",
+      "era": "medieval",
+      "description": "Craftsmen organize and train apprentices.",
+      "cost": {
+        "science": 950
+      },
+      "time": 85,
+      "prerequisites": [
+        "division_of_labor"
+      ]
+    },
+    {
+      "id": "assembly_lines",
+      "name": "Assembly Lines",
+      "branch": "automation",
+      "era": "industrial",
+      "description": "Work flows from station to station.",
+      "cost": {
+        "science": 8000
+      },
+      "time": 150,
+      "prerequisites": [
+        "guilds",
+        "mass_production"
+      ]
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "branch": "automation",
+      "era": "futuristic",
+      "description": "Machines that build machines.",
+      "cost": {
+        "science": 75000
+      },
+      "time": 280,
+      "prerequisites": [
+        "assembly_lines"
+      ]
+    },
+    {
+      "id": "artificial_intelligence",
+      "name": "Artificial Intelligence",
+      "branch": "automation",
+      "era": "futuristic",
+      "description": "Minds without bodies.",
+      "cost": {
+        "science": 125000
+      },
+      "time": 320,
+      "prerequisites": [
+        "robotics",
+        "quantum_computing"
+      ]
+    }
+  ]
+}

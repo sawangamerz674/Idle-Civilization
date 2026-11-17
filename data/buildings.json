@@ -1,0 +1,732 @@
+{
+  "buildings": [
+    {
+      "id": "hut",
+      "name": "Primitive Hut",
+      "description": "A simple shelter that houses a few citizens.",
+      "category": "housing",
+      "era": "stone_age",
+      "cost": {
+        "wood": 15
+      },
+      "costGrowth": 1.342,
+      "housing": 3,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "unlock": null,
+      "asset": "assets/buildings/stone-age/hut.png"
+    },
+    {
+      "id": "farm",
+      "name": "Farm",
+      "description": "Plots of crops that feed the settlement. Workers double its harvest.",
+      "category": "food",
+      "era": "stone_age",
+      "cost": {
+        "wood": 10
+      },
+      "costGrowth": 1.285,
+      "jobs": 2,
+      "output": {
+        "food": 1
+      },
+      "interval": 2,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 30
+        },
+        "growth": 2.0
+      },
+      "unlock": null,
+      "asset": "assets/buildings/stone-age/farm.png"
+    },
+    {
+      "id": "woodcutter",
+      "name": "Woodcutter",
+      "description": "Chops trees for a steady supply of wood.",
+      "category": "resource",
+      "era": "stone_age",
+      "cost": {
+        "food": 10
+      },
+      "costGrowth": 1.285,
+      "jobs": 2,
+      "output": {
+        "wood": 1
+      },
+      "interval": 2,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 25,
+          "food": 20
+        },
+        "growth": 2.0
+      },
+      "unlock": null,
+      "asset": "assets/buildings/stone-age/woodcutter.png"
+    },
+    {
+      "id": "stone_collector",
+      "name": "Stone Collector",
+      "description": "Gathers stones from the riverbed and hills.",
+      "category": "resource",
+      "era": "stone_age",
+      "cost": {
+        "wood": 20
+      },
+      "costGrowth": 1.285,
+      "jobs": 2,
+      "output": {
+        "stone": 1
+      },
+      "interval": 2.5,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 30,
+          "stone": 10
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "building": "woodcutter",
+        "count": 1
+      },
+      "asset": "assets/buildings/stone-age/stone-collector.png"
+    },
+    {
+      "id": "storage_pit",
+      "name": "Storage Pit",
+      "description": "A lined pit that raises storage for food, wood and stone.",
+      "category": "economy",
+      "era": "stone_age",
+      "cost": {
+        "wood": 40,
+        "stone": 15
+      },
+      "costGrowth": 1.35,
+      "jobs": 0,
+      "storage": {
+        "food": 100,
+        "wood": 100,
+        "stone": 100
+      },
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "unlock": {
+        "building": "stone_collector",
+        "count": 1
+      },
+      "asset": "assets/buildings/stone-age/storage-pit.png"
+    },
+    {
+      "id": "stone_house",
+      "name": "Stone House",
+      "description": "Sturdy housing for six citizens.",
+      "category": "housing",
+      "era": "ancient",
+      "cost": {
+        "wood": 40,
+        "stone": 40
+      },
+      "costGrowth": 1.38,
+      "housing": 6,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "unlock": null,
+      "asset": "assets/buildings/ancient/stone-house.png"
+    },
+    {
+      "id": "market",
+      "name": "Market",
+      "description": "Citizens trade goods for coins.",
+      "category": "economy",
+      "era": "ancient",
+      "cost": {
+        "wood": 50,
+        "stone": 30
+      },
+      "costGrowth": 1.323,
+      "jobs": 2,
+      "output": {
+        "coins": 1
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 60,
+          "stone": 40,
+          "coins": 20
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "barter"
+      },
+      "asset": "assets/buildings/ancient/market.png"
+    },
+    {
+      "id": "workshop",
+      "name": "Workshop",
+      "description": "Smelts raw timber into metal. Uses wood.",
+      "category": "industrial",
+      "era": "ancient",
+      "cost": {
+        "wood": 70,
+        "stone": 50
+      },
+      "costGrowth": 1.323,
+      "jobs": 2,
+      "input": {
+        "wood": 1
+      },
+      "output": {
+        "metal": 1
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 80,
+          "stone": 60
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "bronze_working"
+      },
+      "asset": "assets/buildings/ancient/workshop.png"
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "description": "Scholars record knowledge as Science Points.",
+      "category": "science",
+      "era": "ancient",
+      "cost": {
+        "wood": 60,
+        "stone": 60,
+        "coins": 20
+      },
+      "costGrowth": 1.38,
+      "jobs": 2,
+      "output": {
+        "science": 1
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 70,
+          "stone": 70,
+          "coins": 40
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "building": "market",
+        "count": 1,
+        "research": "writing"
+      },
+      "asset": "assets/buildings/ancient/library.png"
+    },
+    {
+      "id": "road",
+      "name": "Road",
+      "description": "Paved roads speed up every trade route: +3% to all production each.",
+      "category": "economy",
+      "era": "ancient",
+      "cost": {
+        "wood": 20,
+        "stone": 50
+      },
+      "costGrowth": 1.95,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "maxCount": 5,
+      "bonus": {
+        "target": "all",
+        "perCopy": 0.03
+      },
+      "unlock": {
+        "building": "market",
+        "count": 1,
+        "research": "masonry"
+      },
+      "asset": "assets/buildings/ancient/road.png"
+    },
+    {
+      "id": "castle",
+      "name": "Castle",
+      "description": "Houses 12 and rallies the realm: +5% to all production each.",
+      "category": "housing",
+      "era": "medieval",
+      "cost": {
+        "wood": 250,
+        "stone": 400,
+        "metal": 100,
+        "coins": 150
+      },
+      "costGrowth": 2.14,
+      "housing": 12,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "maxCount": 3,
+      "bonus": {
+        "target": "all",
+        "perCopy": 0.05
+      },
+      "unlock": {
+        "research": "city_planning"
+      },
+      "asset": "assets/buildings/medieval/castle.png"
+    },
+    {
+      "id": "blacksmith",
+      "name": "Blacksmith",
+      "description": "Forges metal far faster than a workshop. Uses wood.",
+      "category": "industrial",
+      "era": "medieval",
+      "cost": {
+        "wood": 150,
+        "stone": 150,
+        "metal": 20
+      },
+      "costGrowth": 1.342,
+      "jobs": 3,
+      "input": {
+        "wood": 2
+      },
+      "output": {
+        "metal": 3
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 150,
+          "stone": 120,
+          "metal": 30
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "metallurgy"
+      },
+      "asset": "assets/buildings/medieval/blacksmith.png"
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "description": "Grinds grain into plentiful food.",
+      "category": "food",
+      "era": "medieval",
+      "cost": {
+        "wood": 120,
+        "stone": 100
+      },
+      "costGrowth": 1.304,
+      "jobs": 2,
+      "output": {
+        "food": 3
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 120,
+          "stone": 100
+        },
+        "growth": 2.0
+      },
+      "unlock": null,
+      "asset": "assets/buildings/medieval/windmill.png"
+    },
+    {
+      "id": "trading_center",
+      "name": "Trading Center",
+      "description": "A busy hub that brings in many coins.",
+      "category": "economy",
+      "era": "medieval",
+      "cost": {
+        "wood": 200,
+        "stone": 150,
+        "coins": 100
+      },
+      "costGrowth": 1.342,
+      "jobs": 3,
+      "output": {
+        "coins": 4
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 200,
+          "stone": 150,
+          "coins": 100
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "banking"
+      },
+      "asset": "assets/buildings/medieval/trading-center.png"
+    },
+    {
+      "id": "advanced_farm",
+      "name": "Advanced Farm",
+      "description": "Crop rotation and irrigation yield huge harvests.",
+      "category": "food",
+      "era": "medieval",
+      "cost": {
+        "wood": 150,
+        "stone": 100,
+        "coins": 80
+      },
+      "costGrowth": 1.304,
+      "jobs": 3,
+      "output": {
+        "food": 6
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 150,
+          "stone": 100,
+          "coins": 60
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "crop_rotation"
+      },
+      "asset": "assets/buildings/medieval/advanced-farm.png"
+    },
+    {
+      "id": "power_plant",
+      "name": "Power Plant",
+      "description": "Burns wood to generate Energy.",
+      "category": "energy",
+      "era": "industrial",
+      "cost": {
+        "wood": 600,
+        "stone": 600,
+        "metal": 300,
+        "coins": 400
+      },
+      "costGrowth": 1.38,
+      "jobs": 3,
+      "input": {
+        "wood": 2
+      },
+      "output": {
+        "energy": 6
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "stone": 500,
+          "metal": 250,
+          "coins": 300
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "steam_power"
+      },
+      "asset": "assets/buildings/industrial/power-plant.png"
+    },
+    {
+      "id": "factory",
+      "name": "Factory",
+      "description": "Mass-produces metal and coins. Uses energy.",
+      "category": "industrial",
+      "era": "industrial",
+      "cost": {
+        "wood": 500,
+        "stone": 500,
+        "metal": 300,
+        "coins": 500
+      },
+      "costGrowth": 1.38,
+      "jobs": 4,
+      "input": {
+        "energy": 2
+      },
+      "output": {
+        "metal": 4,
+        "coins": 8
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "stone": 400,
+          "metal": 300,
+          "coins": 400
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "building": "power_plant",
+        "count": 1
+      },
+      "asset": "assets/buildings/industrial/factory.png"
+    },
+    {
+      "id": "mine",
+      "name": "Mine",
+      "description": "Digs deep for metal and stone.",
+      "category": "resource",
+      "era": "industrial",
+      "cost": {
+        "wood": 400,
+        "stone": 300,
+        "coins": 300
+      },
+      "costGrowth": 1.342,
+      "jobs": 4,
+      "output": {
+        "metal": 4,
+        "stone": 4
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "wood": 300,
+          "stone": 300,
+          "coins": 250
+        },
+        "growth": 2.0
+      },
+      "unlock": null,
+      "asset": "assets/buildings/industrial/mine.png"
+    },
+    {
+      "id": "railway",
+      "name": "Railway",
+      "description": "Moves goods quickly: +4% to all production each.",
+      "category": "economy",
+      "era": "industrial",
+      "cost": {
+        "stone": 400,
+        "metal": 250,
+        "coins": 300
+      },
+      "costGrowth": 1.95,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "maxCount": 5,
+      "bonus": {
+        "target": "all",
+        "perCopy": 0.04
+      },
+      "unlock": null,
+      "asset": "assets/buildings/industrial/railway.png"
+    },
+    {
+      "id": "industrial_housing",
+      "name": "Industrial Housing",
+      "description": "Tenement blocks that house twenty.",
+      "category": "housing",
+      "era": "industrial",
+      "cost": {
+        "wood": 400,
+        "stone": 500,
+        "metal": 150,
+        "coins": 200
+      },
+      "costGrowth": 1.38,
+      "housing": 20,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "unlock": {
+        "research": "urbanization"
+      },
+      "asset": "assets/buildings/industrial/industrial-housing.png"
+    },
+    {
+      "id": "energy_station",
+      "name": "Advanced Energy Station",
+      "description": "Fusion crystals generate vast Energy with no fuel.",
+      "category": "energy",
+      "era": "futuristic",
+      "cost": {
+        "stone": 800,
+        "metal": 600,
+        "coins": 600,
+        "science": 300
+      },
+      "costGrowth": 1.38,
+      "jobs": 2,
+      "output": {
+        "energy": 40
+      },
+      "interval": 3,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "stone": 600,
+          "metal": 500,
+          "coins": 500,
+          "science": 200
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "fusion_power"
+      },
+      "asset": "assets/buildings/futuristic/energy-station.png"
+    },
+    {
+      "id": "research_lab",
+      "name": "Research Laboratory",
+      "description": "Turns energy into a flood of Science Points.",
+      "category": "science",
+      "era": "futuristic",
+      "cost": {
+        "stone": 600,
+        "metal": 500,
+        "coins": 500,
+        "science": 200
+      },
+      "costGrowth": 1.38,
+      "jobs": 4,
+      "input": {
+        "energy": 3
+      },
+      "output": {
+        "science": 12
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "metal": 400,
+          "coins": 400,
+          "science": 250
+        },
+        "growth": 2.0
+      },
+      "unlock": null,
+      "asset": "assets/buildings/futuristic/research-lab.png"
+    },
+    {
+      "id": "automated_factory",
+      "name": "Automated Factory",
+      "description": "Robots turn energy into metal and coins.",
+      "category": "industrial",
+      "era": "futuristic",
+      "cost": {
+        "stone": 700,
+        "metal": 700,
+        "coins": 800,
+        "science": 300
+      },
+      "costGrowth": 1.38,
+      "jobs": 2,
+      "input": {
+        "energy": 4
+      },
+      "output": {
+        "metal": 20,
+        "coins": 15
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "metal": 600,
+          "coins": 600,
+          "science": 250
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "research": "robotics"
+      },
+      "asset": "assets/buildings/futuristic/automated-factory.png"
+    },
+    {
+      "id": "futuristic_residence",
+      "name": "Futuristic Residence",
+      "description": "Sleek capsule towers housing forty.",
+      "category": "housing",
+      "era": "futuristic",
+      "cost": {
+        "stone": 600,
+        "metal": 500,
+        "coins": 500,
+        "science": 150
+      },
+      "costGrowth": 1.38,
+      "housing": 40,
+      "jobs": 0,
+      "output": {},
+      "interval": 1,
+      "maxLevel": 1,
+      "unlock": {
+        "research": "smart_cities"
+      },
+      "asset": "assets/buildings/futuristic/residence.png"
+    },
+    {
+      "id": "hightech_facility",
+      "name": "High-Tech Production Facility",
+      "description": "Cutting-edge production of coins and science. Uses energy.",
+      "category": "industrial",
+      "era": "futuristic",
+      "cost": {
+        "stone": 900,
+        "metal": 900,
+        "coins": 1000,
+        "science": 500
+      },
+      "costGrowth": 1.418,
+      "jobs": 4,
+      "input": {
+        "energy": 6
+      },
+      "output": {
+        "coins": 60,
+        "science": 15
+      },
+      "interval": 4,
+      "maxLevel": 10,
+      "upgrade": {
+        "cost": {
+          "metal": 800,
+          "coins": 800,
+          "science": 400
+        },
+        "growth": 2.0
+      },
+      "unlock": {
+        "building": "research_lab",
+        "count": 1,
+        "research": "artificial_intelligence"
+      },
+      "asset": "assets/buildings/futuristic/hightech-facility.png"
+    }
+  ]
+}

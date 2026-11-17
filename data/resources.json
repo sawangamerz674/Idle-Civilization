@@ -1,0 +1,60 @@
+{
+  "resources": [
+    {
+      "id": "food",
+      "name": "Food",
+      "icon": "\ud83c\udf56",
+      "baseCap": 200,
+      "consumable": true,
+      "unlockEra": "stone_age"
+    },
+    {
+      "id": "wood",
+      "name": "Wood",
+      "icon": "\ud83e\udeb5",
+      "baseCap": 200,
+      "consumable": false,
+      "unlockEra": "stone_age"
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "icon": "\ud83e\udea8",
+      "baseCap": 200,
+      "consumable": false,
+      "unlockEra": "stone_age"
+    },
+    {
+      "id": "metal",
+      "name": "Metal",
+      "icon": "\ud83d\udd29",
+      "baseCap": 150,
+      "consumable": false,
+      "unlockEra": "ancient"
+    },
+    {
+      "id": "coins",
+      "name": "Coins",
+      "icon": "\ud83e\ude99",
+      "baseCap": 500,
+      "consumable": false,
+      "unlockEra": "ancient"
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "icon": "\u26a1",
+      "baseCap": 100,
+      "consumable": true,
+      "unlockEra": "industrial"
+    },
+    {
+      "id": "science",
+      "name": "Science Points",
+      "icon": "\ud83e\uddea",
+      "baseCap": 300,
+      "consumable": false,
+      "unlockEra": "ancient"
+    }
+  ]
+}

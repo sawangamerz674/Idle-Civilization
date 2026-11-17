@@ -1,0 +1,11 @@
+/* animations.css - UI-side animations (canvas effects live in AnimationManager.js) */
+@keyframes toast-in { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes toast-out { to { transform: translateX(40px); opacity: 0; } }
+.toast { animation: toast-in .25s ease-out; }
+.toast.leaving { animation: toast-out .25s ease-in forwards; }
+
+@keyframes pop { 0% { transform: scale(.85); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.modal { animation: pop .18s ease-out; }
+
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+.pulse { animation: pulse 1.2s ease-in-out infinite; }

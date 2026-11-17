@@ -1,0 +1,40 @@
+{
+  "buildingCostGrowth": 1.15,
+  "upgradeCostGrowth": 1.6,
+  "levelProductionBonus": 0.5,
+  "populationGrowthIntervalSeconds": 8,
+  "foodPerCitizenPerSecond": 0.1,
+  "starvationDeclineIntervalSeconds": 15,
+  "populationBonusPerCitizen": 0.01,
+  "workerStaffingBonus": 1.0,
+  "eraGrowthSpeedup": 0.1,
+  "growthFoodReserveBase": 10,
+  "growthFoodReservePerCitizen": 3,
+  "minPopulation": 1,
+  "baseHousing": 5,
+  "baseProduction": {
+    "food": 0.5,
+    "wood": 0.3,
+    "stone": 0.15
+  },
+  "offlineMaxHours": 8,
+  "offlineEfficiency": 0.5,
+  "prestigeMinCoinsEarned": 100000,
+  "prestigePointsDivisor": 50000,
+  "startingResources": {
+    "food": 30,
+    "wood": 20,
+    "stone": 10,
+    "metal": 0,
+    "coins": 0,
+    "energy": 0,
+    "science": 0
+  },
+  "ads": {
+    "boostSeconds": 300,
+    "maxBoostSeconds": 1200,
+    "productionMultiplier": 2,
+    "researchMultiplier": 2,
+    "offlineDoubleEnabled": true
+  }
+}

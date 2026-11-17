@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Idle Civilization">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Idle Civilization - grow a tiny Stone Age village into a futuristic empire.">
+  <meta name="theme-color" content="#2b6f4e">
+  <title>Idle Civilization</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/icons/icon.webmanifest">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/civilization.css">
+  <link rel="stylesheet" href="css/panels.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Official CrazyGames SDK v3. If it cannot load (offline, blocked, other host) the game still runs without ads/cloud data. -->
+  <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+</head>
+<body>
+  <!-- Loading screen: removed by Game once config is loaded -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-title">Idle Civilization</div>
+    <div class="loading-bar"><div id="loading-bar-fill" class="loading-bar-fill"></div></div>
+    <div id="loading-text" class="loading-text">Loading...</div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <!-- Top HUD -->
+    <header id="hud" class="hud">
+      <div class="hud-era">
+        <span id="hud-era-name" class="era-badge">Stone Age</span>
+      </div>
+      <div id="hud-resources" class="hud-resources"></div>
+      <div class="hud-right">
+        <div id="hud-population" class="hud-pop" title="Population / Housing">
+          <span class="hud-pop-icon">&#128101;</span>
+          <span id="hud-pop-value">0 / 0</span>
+        </div>
+        <span id="hud-boosts" class="hud-boosts hidden"></span>
+        <button id="hud-mute" class="boost-btn" title="Sound on/off" aria-label="Toggle sound">&#128266;</button>
+        <button id="hud-boost" class="boost-btn hidden" title="Free boosts (optional video)">&#127873;</button>
+        <div id="save-indicator" class="save-indicator" title="Save status">Saved</div>
+      </div>
+    </header>
+
+    <!-- Main area -->
+    <main class="main">
+      <nav id="nav" class="nav" aria-label="Main navigation"></nav>
+
+      <section id="view" class="view">
+        <!-- Civilization canvas view -->
+        <div id="panel-civilization" class="panel panel-civilization active" data-panel="civilization">
+          <div class="canvas-wrap">
+            <canvas id="game-canvas" width="960" height="540"></canvas>
+          </div>
+        </div>
+        <!-- Other panels are created by UIManager from the nav config -->
+        <div id="panel-container" class="panel-container"></div>
+      </section>
+    </main>
+
+    <div id="notifications" class="notifications" aria-live="polite"></div>
+    <div id="modal-root" class="modal-root"></div>
+    <div id="tooltip" class="tooltip hidden"></div>
+  </div>
+
+  <noscript>Idle Civilization needs JavaScript enabled to run.</noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

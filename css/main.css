@@ -1,0 +1,49 @@
+/* main.css - design tokens, reset, shared components */
+:root {
+  --bg: #1d2b3a;
+  --bg-panel: #fff8e7;
+  --bg-panel-dark: #f2e3bd;
+  --ink: #3b2a1a;
+  --ink-soft: #6d5640;
+  --accent: #ff9f1c;
+  --accent-dark: #d67a00;
+  --good: #4caf50;
+  --bad: #e5533d;
+  --hud-bg: #3b2a1a;
+  --hud-ink: #fff3d6;
+  --radius: 14px;
+  --shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+  --font: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --hud-h: 56px;
+  --nav-w: 92px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--ink); font-family: var(--font); -webkit-tap-highlight-color: transparent; }
+body { user-select: none; -webkit-user-select: none; }
+button { font-family: inherit; cursor: pointer; border: none; }
+.hidden { display: none !important; }
+
+/* Cartoon button */
+.btn {
+  background: var(--accent); color: #fff; font-weight: 700; font-size: 15px;
+  padding: 8px 16px; border-radius: 12px; border: 3px solid var(--accent-dark);
+  box-shadow: var(--shadow); text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  transition: transform .08s, filter .15s;
+}
+.btn:hover:not(:disabled) { filter: brightness(1.08); }
+.btn:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.25); }
+.btn:disabled { background: #b9ab94; border-color: #948670; cursor: not-allowed; opacity: .8; }
+.btn-secondary { background: #6fa8dc; border-color: #3d78b0; }
+.btn-danger { background: var(--bad); border-color: #a8321f; }
+
+/* Loading screen */
+.loading-screen {
+  position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 18px;
+  background: linear-gradient(#6ec6ff, #bfe9a8);
+}
+.loading-title { font-size: clamp(32px, 8vw, 64px); font-weight: 900; color: #fff; text-shadow: 0 4px 0 #3b2a1a, 0 0 12px rgba(0,0,0,.3); }
+.loading-bar { width: min(320px, 70vw); height: 22px; background: rgba(255,255,255,.5); border: 3px solid #3b2a1a; border-radius: 14px; overflow: hidden; }
+.loading-bar-fill { height: 100%; width: 0%; background: var(--accent); transition: width .2s; }
+.loading-text { color: #3b2a1a; font-weight: 700; }

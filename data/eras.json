@@ -1,0 +1,146 @@
+{
+  "eras": [
+    {
+      "id": "stone_age",
+      "index": 1,
+      "name": "Stone Age",
+      "sky": [
+        "#8fd3ff",
+        "#d6f1c9"
+      ],
+      "ground": "#7bb661",
+      "accent": "#a67c52",
+      "storageMultiplier": 1,
+      "description": "Primitive huts, farms, woodcutters and stone collectors.",
+      "requirements": {}
+    },
+    {
+      "id": "ancient",
+      "index": 2,
+      "name": "Ancient Age",
+      "sky": [
+        "#ffd59a",
+        "#fff0c9"
+      ],
+      "ground": "#d2b872",
+      "accent": "#d8a657",
+      "storageMultiplier": 120,
+      "description": "Markets, stone houses, workshops, libraries and roads. Metal, coins and science appear.",
+      "requirements": {
+        "resources": {
+          "food": 150,
+          "wood": 180,
+          "stone": 150
+        },
+        "population": 8,
+        "buildings": {
+          "farm": 2,
+          "woodcutter": 2,
+          "stone_collector": 1
+        },
+        "research": [
+          "basic_tools"
+        ]
+      }
+    },
+    {
+      "id": "medieval",
+      "index": 3,
+      "name": "Medieval Age",
+      "sky": [
+        "#a9c9ff",
+        "#e6ecf7"
+      ],
+      "ground": "#6a9a58",
+      "accent": "#8a8f98",
+      "storageMultiplier": 600,
+      "description": "Castles, blacksmiths, windmills, trading centers and advanced farms.",
+      "requirements": {
+        "resources": {
+          "wood": 18000,
+          "stone": 16800,
+          "metal": 6000,
+          "coins": 12000,
+          "science": 3600
+        },
+        "population": 25,
+        "buildings": {
+          "market": 2,
+          "workshop": 1,
+          "library": 1,
+          "stone_house": 2
+        },
+        "research": [
+          "bronze_working",
+          "currency"
+        ]
+      }
+    },
+    {
+      "id": "industrial",
+      "index": 4,
+      "name": "Industrial Age",
+      "sky": [
+        "#b7b2aa",
+        "#e0d9cf"
+      ],
+      "ground": "#7a7568",
+      "accent": "#5f5a52",
+      "storageMultiplier": 3000,
+      "description": "Factories, mines, railways, power plants and industrial housing. Energy appears.",
+      "requirements": {
+        "resources": {
+          "wood": 96000,
+          "stone": 96000,
+          "metal": 48000,
+          "coins": 144000,
+          "science": 60000
+        },
+        "population": 60,
+        "buildings": {
+          "blacksmith": 2,
+          "trading_center": 2,
+          "castle": 1,
+          "windmill": 1
+        },
+        "research": [
+          "metallurgy",
+          "banking"
+        ]
+      }
+    },
+    {
+      "id": "futuristic",
+      "index": 5,
+      "name": "Futuristic Age",
+      "sky": [
+        "#2a1b5e",
+        "#6a4fd1"
+      ],
+      "ground": "#38456e",
+      "accent": "#5ee6ff",
+      "storageMultiplier": 18000,
+      "description": "Laboratories, automated factories, advanced energy stations and futuristic residences.",
+      "requirements": {
+        "resources": {
+          "stone": 480000,
+          "metal": 300000,
+          "coins": 960000,
+          "science": 360000,
+          "energy": 96000
+        },
+        "population": 140,
+        "buildings": {
+          "factory": 2,
+          "power_plant": 2,
+          "mine": 2,
+          "industrial_housing": 3
+        },
+        "research": [
+          "steam_power",
+          "stock_exchange"
+        ]
+      }
+    }
+  ]
+}

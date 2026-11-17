@@ -1,0 +1,546 @@
+{
+  "technologies": [
+    {
+      "id": "tech_selective_planting",
+      "research": "selective_planting",
+      "name": "Seed Selection",
+      "description": "Hardier crops feed more mouths.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "food",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "tech_irrigation",
+      "research": "irrigation",
+      "name": "Irrigation Canals",
+      "description": "Watered farms yield much more.",
+      "effects": [
+        {
+          "type": "building",
+          "target": "farm",
+          "value": 0.3
+        }
+      ]
+    },
+    {
+      "id": "tech_crop_rotation",
+      "research": "crop_rotation",
+      "name": "Three-Field System",
+      "description": "Better harvests and a new kind of farm.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "food",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "tech_fertilizers",
+      "research": "fertilizers",
+      "name": "Chemical Fertilizer",
+      "description": "Fields produce far beyond their old limits.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "food",
+          "value": 0.4
+        },
+        {
+          "type": "building",
+          "target": "advanced_farm",
+          "value": 0.3
+        }
+      ]
+    },
+    {
+      "id": "tech_hydroponics",
+      "research": "hydroponics",
+      "name": "Vertical Farming",
+      "description": "Food overflows and families grow faster.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "food",
+          "value": 1.0
+        },
+        {
+          "type": "stat",
+          "target": "growthSpeed",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "tech_shelter_building",
+      "research": "shelter_building",
+      "name": "Sturdy Shelters",
+      "description": "Every settlement has more room.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "housing",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "tech_masonry",
+      "research": "masonry",
+      "name": "Stonecraft",
+      "description": "More housing and storage; roads become possible.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "housing",
+          "value": 3
+        },
+        {
+          "type": "storage",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_city_planning",
+      "research": "city_planning",
+      "name": "Walled Towns",
+      "description": "Room for more citizens; castles can be built.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "housing",
+          "value": 5
+        },
+        {
+          "type": "storage",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "tech_urbanization",
+      "research": "urbanization",
+      "name": "Tenement Districts",
+      "description": "Dense housing and bigger depots.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "housing",
+          "value": 10
+        },
+        {
+          "type": "storage",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_smart_cities",
+      "research": "smart_cities",
+      "name": "Arcologies",
+      "description": "Huge housing capacity and faster growth.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "housing",
+          "value": 20
+        },
+        {
+          "type": "stat",
+          "target": "growthSpeed",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "tech_basic_tools",
+      "research": "basic_tools",
+      "name": "Flint Tools",
+      "description": "Wood and stone come faster.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "wood",
+          "value": 0.25
+        },
+        {
+          "type": "production",
+          "target": "stone",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_bronze_working",
+      "research": "bronze_working",
+      "name": "Bronze Tools",
+      "description": "Metal production improves; workshops can be built.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "metal",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_metallurgy",
+      "research": "metallurgy",
+      "name": "Iron Forging",
+      "description": "Blacksmiths turn out more metal.",
+      "effects": [
+        {
+          "type": "building",
+          "target": "blacksmith",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_mass_production",
+      "research": "mass_production",
+      "name": "Interchangeable Parts",
+      "description": "Factories and metal output improve.",
+      "effects": [
+        {
+          "type": "building",
+          "target": "factory",
+          "value": 0.3
+        },
+        {
+          "type": "production",
+          "target": "metal",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "tech_nanotechnology",
+      "research": "nanotechnology",
+      "name": "Nanofabrication",
+      "description": "Metal flows and everything speeds up.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "metal",
+          "value": 0.5
+        },
+        {
+          "type": "production",
+          "target": "all",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_barter",
+      "research": "barter",
+      "name": "Trade Customs",
+      "description": "Markets can be built; coin income improves.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "coins",
+          "value": 0.2
+        }
+      ]
+    },
+    {
+      "id": "tech_currency",
+      "research": "currency",
+      "name": "Coinage",
+      "description": "More coins and cheaper construction.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "coins",
+          "value": 0.25
+        },
+        {
+          "type": "stat",
+          "target": "buildingCost",
+          "value": 0.03
+        }
+      ]
+    },
+    {
+      "id": "tech_banking",
+      "research": "banking",
+      "name": "Banks",
+      "description": "Coin income rises; trading centers can be built.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "coins",
+          "value": 0.3
+        }
+      ]
+    },
+    {
+      "id": "tech_stock_exchange",
+      "research": "stock_exchange",
+      "name": "Markets of Capital",
+      "description": "Coins surge and building gets cheaper.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "coins",
+          "value": 0.5
+        },
+        {
+          "type": "stat",
+          "target": "buildingCost",
+          "value": 0.05
+        }
+      ]
+    },
+    {
+      "id": "tech_global_trade",
+      "research": "global_trade",
+      "name": "Global Network",
+      "description": "Coin income doubles and construction is cheaper.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "coins",
+          "value": 1.0
+        },
+        {
+          "type": "stat",
+          "target": "buildingCost",
+          "value": 0.07
+        }
+      ]
+    },
+    {
+      "id": "tech_oral_tradition",
+      "research": "oral_tradition",
+      "name": "Storytelling",
+      "description": "Knowledge spreads faster.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "researchSpeed",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_writing",
+      "research": "writing",
+      "name": "Scribes and Scrolls",
+      "description": "Libraries can be built; science improves.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "science",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_scientific_method",
+      "research": "scientific_method",
+      "name": "Empirical Method",
+      "description": "Science and research speed improve.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "science",
+          "value": 0.3
+        },
+        {
+          "type": "stat",
+          "target": "researchSpeed",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_universities",
+      "research": "universities",
+      "name": "Academia",
+      "description": "Science and research speed improve.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "science",
+          "value": 0.5
+        },
+        {
+          "type": "stat",
+          "target": "researchSpeed",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "tech_quantum_computing",
+      "research": "quantum_computing",
+      "name": "Quantum Processors",
+      "description": "Science doubles and research speeds up.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "science",
+          "value": 1.0
+        },
+        {
+          "type": "stat",
+          "target": "researchSpeed",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_fire_mastery",
+      "research": "fire_mastery",
+      "name": "Controlled Fire",
+      "description": "Warmth helps wood use and population growth.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "wood",
+          "value": 0.1
+        },
+        {
+          "type": "stat",
+          "target": "growthSpeed",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_waterwheels",
+      "research": "waterwheels",
+      "name": "Water Power",
+      "description": "Food and wood production improve.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "food",
+          "value": 0.1
+        },
+        {
+          "type": "production",
+          "target": "wood",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "tech_wind_power",
+      "research": "wind_power",
+      "name": "Sail Mills",
+      "description": "Windmills work much harder.",
+      "effects": [
+        {
+          "type": "building",
+          "target": "windmill",
+          "value": 0.3
+        }
+      ]
+    },
+    {
+      "id": "tech_steam_power",
+      "research": "steam_power",
+      "name": "Steam Engines",
+      "description": "Power plants can be built; energy improves.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "energy",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_fusion_power",
+      "research": "fusion_power",
+      "name": "Fusion Reactors",
+      "description": "Advanced energy stations can be built.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "energy",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "id": "tech_division_of_labor",
+      "research": "division_of_labor",
+      "name": "Specialized Work",
+      "description": "Workers boost their buildings more.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "staffing",
+          "value": 0.1
+        }
+      ]
+    },
+    {
+      "id": "tech_guilds",
+      "research": "guilds",
+      "name": "Craft Guilds",
+      "description": "Workers boost their buildings more.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "staffing",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "tech_assembly_lines",
+      "research": "assembly_lines",
+      "name": "Production Lines",
+      "description": "Workers and factories both improve.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "staffing",
+          "value": 0.25
+        },
+        {
+          "type": "building",
+          "target": "factory",
+          "value": 0.25
+        }
+      ]
+    },
+    {
+      "id": "tech_robotics",
+      "research": "robotics",
+      "name": "Robot Workers",
+      "description": "Workers matter far more; automated factories can be built.",
+      "effects": [
+        {
+          "type": "stat",
+          "target": "staffing",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "id": "tech_artificial_intelligence",
+      "research": "artificial_intelligence",
+      "name": "Machine Minds",
+      "description": "Everything improves; high-tech facilities can be built.",
+      "effects": [
+        {
+          "type": "production",
+          "target": "all",
+          "value": 0.25
+        }
+      ]
+    }
+  ]
+}

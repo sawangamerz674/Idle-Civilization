@@ -1,0 +1,101 @@
+{
+  "gameName": "Idle Civilization",
+  "version": "1.0.0",
+  "saveVersion": 1,
+  "saveKey": "idleCivilization.save",
+  "tickRate": 10,
+  "maxFrameDeltaSeconds": 0.25,
+  "autosaveIntervalSeconds": 30,
+  "canvas": {
+    "width": 960,
+    "height": 540
+  },
+  "startingEra": "stone_age",
+  "startingPopulation": 3,
+  "navigation": [
+    {
+      "id": "civilization",
+      "label": "Civilization",
+      "icon": "🏕️",
+      "primary": true
+    },
+    {
+      "id": "buildings",
+      "label": "Buildings",
+      "icon": "🏗️",
+      "primary": true
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "icon": "👥",
+      "primary": true
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "icon": "🔬",
+      "primary": true
+    },
+    {
+      "id": "technologies",
+      "label": "Techs",
+      "icon": "⚙️",
+      "primary": false
+    },
+    {
+      "id": "upgrades",
+      "label": "Upgrades",
+      "icon": "⬆️",
+      "primary": false
+    },
+    {
+      "id": "achievements",
+      "label": "Achieve",
+      "icon": "🏆",
+      "primary": false
+    },
+    {
+      "id": "prestige",
+      "label": "Legacy",
+      "icon": "👑",
+      "primary": false
+    },
+    {
+      "id": "statistics",
+      "label": "Stats",
+      "icon": "📊",
+      "primary": false
+    },
+    {
+      "id": "advisor",
+      "label": "Advisor",
+      "icon": "🧠",
+      "primary": false
+    },
+    {
+      "id": "settings",
+      "label": "Settings",
+      "icon": "🔧",
+      "primary": false
+    }
+  ],
+  "dataFiles": {
+    "resources": "data/resources.json",
+    "buildings": "data/buildings.json",
+    "eras": "data/eras.json",
+    "upgrades": "data/upgrades.json",
+    "research": "data/research.json",
+    "technologies": "data/technologies.json",
+    "achievements": "data/achievements.json",
+    "prestige": "data/prestige.json"
+  },
+  "crazyGames": {
+    "enabled": true,
+    "launchStage": "full"
+  },
+  "advisor": {
+    "endpoint": "",
+    "timeoutMs": 8000
+  }
+}

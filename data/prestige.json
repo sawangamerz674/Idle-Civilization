@@ -1,0 +1,25 @@
+{
+  "name": "Civilization Legacy",
+  "currency": { "id": "civilization_points", "name": "Civilization Points", "icon": "👑" },
+  "formula": {
+    "weights": { "food": 0.02, "wood": 0.02, "stone": 0.03, "metal": 0.15, "coins": 0.4, "energy": 1, "science": 0.8 },
+    "divisor": 30000,
+    "exponent": 0.5,
+    "minPoints": 1
+  },
+  "start": {
+    "description": "A reset keeps achievements, statistics, settings and everything bought with Civilization Points. Resources, buildings, population, era, research and upgrades start over."
+  },
+  "bonuses": [
+    { "id": "ancestral_wisdom", "name": "Ancestral Wisdom", "icon": "📜", "description": "Your ancestors' knowledge boosts all production.", "maxLevel": 20, "cost": 1, "costGrowth": 1.35, "effects": [{ "type": "production", "target": "all", "value": 0.1 }] },
+    { "id": "legacy_granaries", "name": "Legacy Granaries", "icon": "🏺", "description": "Larger storage on every resource.", "maxLevel": 10, "cost": 2, "costGrowth": 1.4, "effects": [{ "type": "storage", "value": 0.1 }] },
+    { "id": "quick_minds", "name": "Quick Minds", "icon": "🔬", "description": "Research finishes faster.", "maxLevel": 10, "cost": 2, "costGrowth": 1.4, "effects": [{ "type": "stat", "target": "researchSpeed", "value": 0.1 }] },
+    { "id": "frugal_builders", "name": "Frugal Builders", "icon": "🏗️", "description": "Buildings cost less.", "maxLevel": 8, "cost": 3, "costGrowth": 1.5, "effects": [{ "type": "stat", "target": "buildingCost", "value": 0.02 }] },
+    { "id": "fertile_families", "name": "Fertile Families", "icon": "👶", "description": "Citizens are born faster.", "maxLevel": 8, "cost": 2, "costGrowth": 1.4, "effects": [{ "type": "stat", "target": "growthSpeed", "value": 0.1 }] },
+    { "id": "ancestral_homes", "name": "Ancestral Homes", "icon": "🏠", "description": "Extra housing from the start.", "maxLevel": 10, "cost": 2, "costGrowth": 1.4, "effects": [{ "type": "stat", "target": "housing", "value": 2 }] },
+    { "id": "head_start", "name": "Head Start", "icon": "🎒", "description": "Begin each new civilization with extra Food, Wood and Stone.", "maxLevel": 10, "cost": 1, "costGrowth": 1.4, "startingResources": { "food": 40, "wood": 40, "stone": 25 } },
+    { "id": "restful_dreams", "name": "Restful Dreams", "icon": "🌙", "description": "More production while you are away.", "maxLevel": 10, "cost": 3, "costGrowth": 1.4, "effects": [{ "type": "stat", "target": "offlineEfficiency", "value": 0.05 }] },
+    { "id": "long_slumber", "name": "Long Slumber", "icon": "⏳", "description": "Your civilization works for longer while you are away.", "maxLevel": 5, "cost": 4, "costGrowth": 1.6, "effects": [{ "type": "stat", "target": "offlineHours", "value": 2 }] },
+    { "id": "ancient_heritage", "name": "Ancient Heritage", "icon": "🏛️", "description": "Every new civilization begins in the Ancient Age.", "maxLevel": 1, "cost": 25, "costGrowth": 1, "startEra": "ancient" }
+  ]
+}
